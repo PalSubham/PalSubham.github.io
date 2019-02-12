@@ -32,7 +32,8 @@ h1:hover {
 
 #container {
 	background: linear-gradient(-45deg, #ee82ee, #32cd32, #ffffff, #87cefa, #a0522d);
-	width: 27vw;
+	width: 28%;
+	height: 40%;
 	border: 5px solid;
 	border-color: #37eba0;
 	border-radius: 12px;
@@ -154,42 +155,42 @@ td, th {
 }
 
 .small {
-	width: 15vw;
-	height: 15vw;
-	left: -7.5vw;
-	bottom: -7.5vw;
+	width: 200px;
+	height: 200px;
+	left: -100px;
+	bottom: -100px;
 	opacity: 0.9;
 }
 
 .medium {
-	width: 30vw;
-	height: 30vw;
-	left: -15vw;
-	bottom: -15vw;
+	width: 400px;
+	height: 400px;
+	left: -200px;
+	bottom: -200px;
 	opacity: 0.8;
 }
 
 .large {
-	width: 45vw;
-	height: 45vw;
-	left: -22.5vw;
-	bottom: -22.5vw;
+	width: 600px;
+	height: 600px;
+	left: -300px;
+	bottom: -300px;
 	opacity: 0.7;
 }
 
 .xlarge {
-	width: 60vw;
-	height: 60vw;
-	left: -30vw;
-	bottom: -30vw;
+	width: 800px;
+	height: 800px;
+	left: -400px;
+	bottom: -400px;
 	opacity: 0.5;
 }
 
 .xxlarge {
-	width: 75vw;
-	height: 75vw;
-	left: -37.5vw;
-	bottom: -37.5vw;
+	width: 1000px;
+	height: 1000px;
+	left: -500px;
+	bottom: -500px;
 	opacity: 0.2;
 }
 
