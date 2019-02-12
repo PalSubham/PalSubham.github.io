@@ -4,7 +4,6 @@ html {
 
 body {
 	background: linear-gradient(to top, #c8145f 60%, #b0e0e6);
-	background-size: 100vw 100vh;
 	background-size: auto 100%;
 	position:relative;
 }
