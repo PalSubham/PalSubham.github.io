@@ -1,0 +1,70 @@
+<!--It's the main HTML file. Don't rename it.-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href=".\css\colorpicker.css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src=".\js\colorpicker.js"></script>
+		
+		<title>ColorMixer</title>
+		
+		<link rel="shortcut icon" href=".\media\favicon.ico"/>
+		
+
+	</head>
+
+	<body>
+		
+		<h1>ColorMixer - Generate your colors</h1>
+		
+		<div class="ripple-back">
+			<div class="circle xxlarge"></div>
+			<div class="circle xlarge"></div>
+			<div class="circle large"></div>
+			<div class="circle medium"></div>
+			<div class="circle small"></div>
+		</div>
+
+		<div id="container">
+			<div class="inner-container">
+				<input type="range" id="slider-red" min="0" max="255" step="1" value="200"/>
+				<div id="red-color" class="index"></div>
+			</div>
+			
+			<div class="inner-container">
+				<input type="range" id="slider-green" min="0" max="255" step="1" value="20"/>
+				<div id="green-color" class="index"></div>
+			</div>
+			
+			<div class="inner-container">
+				<input type="range" id="slider-blue" min="0" max="255" step="1" value="95"/>
+				<div id="blue-color" class="index"></div>
+			</div>
+			
+			<table>
+				<tbody>
+					<tr>
+						<th>Hex Code:</th>
+						<td id="hex-value">#C8145F</td>
+					</tr>
+					
+					<tr id="empty"></tr>
+					
+					<tr>
+						<th>RGB Code:</th>
+						<td id="rgb-value">(200, 20, 95)</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+	</body>
+
+</html>
