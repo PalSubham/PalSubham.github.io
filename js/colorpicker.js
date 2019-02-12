@@ -18,6 +18,7 @@ $(window).ready(function () {
 		$("#blue-color").css("background", "linear-gradient(to right, blue " + modified_blue + "%, white " + modified_blue + "% 100%)");
 		
 		$("#super-container").css("background", "linear-gradient(to top, #" + hex_pad(red_val) + hex_pad(green_val) + hex_pad(blue_val) + " 60%, #b0e0e6)");
+		$("body").css("background-color", "#" +  hex_pad(red_val) + hex_pad(green_val) + hex_pad(blue_val));
 		$("#container").css("border-color", "#" + hex_pad(255 - red_val) + hex_pad(255 - green_val) + hex_pad(255 - blue_val));
 		$("td").css("background-color", "rgba(" + red_val.toString() + ", " + green_val.toString() + ", " + blue_val.toString() + ", 0.3)");
 		$(".circle").css("box-shadow", "0px 0px 1px 0px #" + hex_pad(red_val) + hex_pad(green_val) + hex_pad(blue_val));
