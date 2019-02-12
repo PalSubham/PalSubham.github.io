@@ -1,6 +1,7 @@
 body {
 	background: linear-gradient(to top, #c8145f 60%, #b0e0e6);
 	background-attachment: fixed;
+	background-size: cover;
 	position:relative;
 }
 
