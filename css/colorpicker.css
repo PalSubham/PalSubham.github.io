@@ -1,19 +1,13 @@
-html, body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	width: 100vw;
+html {
+	min-height: 100%;
+	min-width: 100%;
 }
 
 body {
-	background-color: #c8145f;
-}
-
-#super-container {
-	background: linear-gradient(to top, #c8145f 60%, #b0e0e6);
-	height: 90%;
-	width: 100%;
-	position:relative;
+	background: linear-gradient(to top, #c8145f 55%, #b0e0e6) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
 }
 
 h1 {
@@ -207,5 +201,66 @@ td, th {
 	
 	100% {
 		transform: scale(0.8);
+	}
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+	
+	body {
+		background: linear-gradient(to top, #c8145f 80%, #b0e0e6) no-repeat;
+	}
+	
+	#container {
+		width: 45%;
+		margin-left: 1%;
+		margin-top: 15%;
+	}
+	
+	html {
+		min-height: 300%;
+		min-width: 200%;
+		position: fixed;
+	}
+	
+	table {
+		font-size: 5.5vw;
+		margin-left: 2%;
+	}
+	
+	h1{
+		font-size: 6.5vw;
+		margin-left: 6vw;
+	}
+	
+	h1:hover {
+		font-size: 6.7vw;
+		margin-left: 5vw;
+	}
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+	body{
+		background: linear-gradient(to top, #c8145f 50%, #b0e0e6) no-repeat;
+	}
+	
+	#container {
+		width: 50%;
+		margin-left: 40%;
+		margin-top: 20%;
+		margin-right: 10%;
+	}
+	
+	html {
+		min-height: 210%;
+	}
+	
+	table {
+		font-size: 2.5vw;
+		margin-left: 2%;
+	}
+	
+	h1:hover {
+		font-size: 6.7vw;
+		margin-left: 5vw;
 	}
 }
