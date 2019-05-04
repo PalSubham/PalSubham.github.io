@@ -1,4 +1,4 @@
-# PalSubham.github.io
+# colorpicker
 
 This is a practice project on basic front-end technologies.
 
