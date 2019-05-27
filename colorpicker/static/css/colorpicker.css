@@ -15,6 +15,7 @@ h1 {
 	font-size: 5.2vw;
 	background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 0.1px black;
 	position: absolute;

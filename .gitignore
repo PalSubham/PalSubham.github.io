@@ -1,0 +1,7 @@
+*.pyc
+*~
+__pycache__
+color-venv
+.DS_store
+*.ini
+*.png

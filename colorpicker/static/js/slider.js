@@ -1,10 +1,13 @@
 $(window).ready(function () {
-	function hex_pad(value)  {
+	
+	function hex_pad(value)
+	{
 		let hex = value.toString(16);
-		return (hex.length < 2) ? "0"+hex : hex;
+		return (hex.length < 2) ? ("0" + hex) : hex;
 	}
 	
-	function config_slider() {
+	function config_slider()
+	{
 		let red_val = parseInt($("#slider-red").val(), 10);
 		let green_val = parseInt($("#slider-green").val(), 10);
 		let blue_val = parseInt($("#slider-blue").val(), 10);
