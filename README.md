@@ -9,6 +9,4 @@ The CSS is made screen-size compatible but some features can run only in Google 
 
 We are using flask for backend.
 
-The genarated color can be downloaded as PNG file with name containing hex code and RGB code.
-
-Celery is used to asynchronously delete the genarated PNG file from server.
+The genarated color can be downloaded as PNG file with name containing hex code.
