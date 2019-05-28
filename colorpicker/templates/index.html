@@ -9,7 +9,9 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/colorpicker.css') }}"/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"/>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+		<script src="{{ url_for('static', filename='js/hex_pad.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/slider.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/button.js') }}"></script>
 		
@@ -63,10 +65,12 @@
 					</tr>
 				</tbody>
 			</table>
+
+			<button id="download">Get the color!!!</button>
 		</div>
 
-		<button>Get the color!!!</button>
-		
+		<a id="down"></a>
+
 	</body>
 
 </html>

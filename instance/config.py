@@ -4,8 +4,12 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Root directory for media files
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 TEMPLATES_AUTO_RELOAD = True
 
-DEBUG = True
+ENV = 'production'
+
+DEBUG = False
+
+USE_X_SENDFILE = True
