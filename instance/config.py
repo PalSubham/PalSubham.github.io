@@ -7,9 +7,3 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 TEMPLATES_AUTO_RELOAD = True
-
-ENV = 'production'
-
-DEBUG = False
-
-USE_X_SENDFILE = True
