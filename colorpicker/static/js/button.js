@@ -23,7 +23,6 @@ $(window).ready(function () {
             type: 'POST',
             url: $SCRIPT_ROOT + '/get_image/',
             data: {'hex_code': hex},
-            cache: false,
             xhrFields: {responseType: 'blob'},
             success: function(data, textStatus, jqXHR) {
                 if(jqXHR.getResponseHeader('if_success') === '1')
