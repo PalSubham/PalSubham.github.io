@@ -10,3 +10,5 @@ The CSS is made screen-size compatible but some features can run only in Google 
 We are using flask for backend.
 
 The genarated color can be downloaded as PNG file with name containing hex code.
+
+uWSGI server is used which will also periodically delete the generated PNG files using timer.
