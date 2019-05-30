@@ -5,3 +5,5 @@ color-venv
 .DS_store
 *.ini
 *.png
+uwsgi.log
+*.sock
