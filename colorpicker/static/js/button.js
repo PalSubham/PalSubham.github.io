@@ -14,16 +14,25 @@ $(window).ready(function () {
         let red_val = parseInt($("#slider-red").val(), 10);
 		let green_val = parseInt($("#slider-green").val(), 10);
         let blue_val = parseInt($("#slider-blue").val(), 10);
-        let hex = '#' + hex_pad(red_val) + hex_pad(green_val) + hex_pad(blue_val);
+        var hex = '#' + hex_pad(red_val) + hex_pad(green_val) + hex_pad(blue_val);
         var now_element = $(this);
+        var csrftoken = $('input[type=hidden]').val();
 
         now_element.prop('disabled', true);
 
         $.ajax({
             type: 'POST',
-            url: $SCRIPT_ROOT + '/get_image/',
+            url: '/get_image',
             data: {'hex_code': hex},
             xhrFields: {responseType: 'blob'},
+            beforeSend: function (jqXHR, settings) {
+                if(!/^(GET|HEAD|OPTIONS|TRACE)$/.test(settings.type) && !this.crossDomain)
+                {
+                    jqXHR.setRequestHeader('X-CSRFToken', csrftoken);
+                }
+
+                return;
+            },
             success: function(data, textStatus, jqXHR) {
                 if(jqXHR.getResponseHeader('if_success') === '1')
                 {

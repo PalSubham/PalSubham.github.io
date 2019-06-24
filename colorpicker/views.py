@@ -13,24 +13,31 @@ def create_png(hex):
 bp = Blueprint('views', __name__, url_prefix = '/')
 
 # Serves the root html file
-@bp.route('/')
+@bp.route('/', methods = ['GET',])
 def root():
 	return render_template('index.html')
 
+
+# For favicon.ico
+@bp.route('/favicon.ico', methods = ['GET',])
+def favicon():
+	return send_from_directory(os.path.join(os.path.join(current_app.root_path, 'static'), 'icon'), 'favicon.ico', mimetype = 'image/x-icon')
+
+
 # Find for PNG, if not found create one and serve it with some HTTP headers
-@bp.route('/get_image/', methods = ['POST',])
+@bp.route('/get_image', methods = ['POST',])
 def send_image():
 	if request.method == 'POST':
 		color_code = request.form['hex_code']
 		try:
-			response = send_from_directory(current_app.config['MEDIA_ROOT'], color_code + '.png', as_attachment = True)
+			response = send_from_directory(current_app.config['MEDIA_ROOT'], color_code + '.png', as_attachment = True, mimetype = 'image/png')
 			response.headers['png_download'] = 'SUCCESS...PRESS OK TO DOWNLOAD'
 			response.headers['name_of_file'] = str(color_code + '.png')
 			response.headers['if_success'] = '1'
 		except NotFound:
 			try:
 				create_png(color_code)
-				response = send_from_directory(current_app.config['MEDIA_ROOT'], color_code + '.png', as_attachment = True)
+				response = send_from_directory(current_app.config['MEDIA_ROOT'], color_code + '.png', as_attachment = True, mimetype = 'image/png')
 				response.headers['png_download'] = 'SUCCESS...PRESS OK TO DOWNLOAD'
 				response.headers['name_of_file'] = str(color_code + '.png')
 				response.headers['if_success'] = '1'
@@ -40,8 +47,3 @@ def send_image():
 				response.headers['if_success'] = '0'
 		finally:
 			return response
-
-	
-
-		
-	
