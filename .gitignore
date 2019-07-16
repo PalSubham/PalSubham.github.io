@@ -4,6 +4,7 @@ __pycache__
 color-venv
 .DS_store
 *.ini
+!uwsgi.ini
 *.png
 uwsgi.log
 *.sock
