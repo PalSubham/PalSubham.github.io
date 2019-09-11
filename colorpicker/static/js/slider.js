@@ -2,13 +2,13 @@ $(window).ready(function () {
 
 	function config_slider()
 	{
-		let red_val = parseInt($("#slider-red").val(), 10);
-		let green_val = parseInt($("#slider-green").val(), 10);
-		let blue_val = parseInt($("#slider-blue").val(), 10);
+		const red_val = parseInt($("#slider-red").val(), 10);
+		const green_val = parseInt($("#slider-green").val(), 10);
+		const blue_val = parseInt($("#slider-blue").val(), 10);
 
-		let modified_red = (((red_val/255)*94)+3).toString();
-		let modified_green = (((green_val/255)*94)+3).toString();
-		let modified_blue = (((blue_val/255)*94)+3).toString();
+		const modified_red = (((red_val/255)*94)+3).toString();
+		const modified_green = (((green_val/255)*94)+3).toString();
+		const modified_blue = (((blue_val/255)*94)+3).toString();
 		
 		$("#red-color").css("background", "linear-gradient(to right, red " + modified_red + "%, white " + modified_red + "% 100%)");
 		$("#green-color").css("background", "linear-gradient(to right, green " + modified_green + "%, white " + modified_green + "% 100%)");
@@ -32,10 +32,11 @@ $(window).ready(function () {
 		
 		$("#hex-value").html("#" + hex_pad(red_val).toUpperCase() + hex_pad(green_val).toUpperCase() + hex_pad(blue_val).toUpperCase());
 		$("#rgb-value").html("(" + red_val.toString() + ", " + green_val.toString() + ", " + blue_val.toString() + ")");
+		$('input[type=hidden]').val("#" + hex_pad(red_val).toUpperCase() + hex_pad(green_val).toUpperCase() + hex_pad(blue_val).toUpperCase());
 		
 		return;
 	}
 	
 	$('input[type="range"]').on("input", function (event) {config_slider();});
-	$('input[type="range"]').on("input", function (event) {config_slider();});
+	$('input[type="range"]').on("change", function (event) {config_slider();});
 });
