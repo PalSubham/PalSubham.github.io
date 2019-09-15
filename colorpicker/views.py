@@ -1,7 +1,7 @@
 from PIL import Image
 import os
 from io import BytesIO
-from flask import Blueprint, request, render_template, current_app, send_from_directory, send_file as flask_send_file
+from flask import Blueprint, request, render_template, current_app, send_from_directory, make_response, Response
 
 
 bp = Blueprint('views', __name__, url_prefix = '/')
@@ -26,4 +26,7 @@ def send_image():
 	img = Image.new('RGB', (60, 30), color_code)
 	img.save(buffer, format = 'PNG', quality = 70)
 	buffer.seek(0)
-	return flask_send_file(buffer, as_attachment = True, attachment_filename = color_code + '.png', mimetype = 'image/png')
+	response = make_response(Response(buffer, mimetype = 'image/png', direct_passthrough = True))
+	response.headers.set('Content-Type', 'image/png')
+	response.headers.set('Content-Disposition', 'attachment', filename = color_code + '.png')
+	return response
