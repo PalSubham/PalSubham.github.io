@@ -10,7 +10,6 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"/>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-		<script src="{{ url_for('static', filename='js/hex_pad.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/slider.js') }}"></script>
 		
 		<title>ColorMixer</title>
@@ -31,15 +30,15 @@
 		</div>
 		<div id="container">
 			<div class="inner-container">
-				<input type="range" id="slider-red" min="0" max="255" step="1" value="200"/>
+				<input type="range" id="slider-red" min="0" max="255" step="1" value="200" onchange="sliderChanged();"/>
 				<div id="red-color" class="index"></div>
 			</div>
 			<div class="inner-container">
-				<input type="range" id="slider-green" min="0" max="255" step="1" value="20"/>
+				<input type="range" id="slider-green" min="0" max="255" step="1" value="20" onchange="sliderChanged();"/>
 				<div id="green-color" class="index"></div>
 			</div>
 			<div class="inner-container">
-				<input type="range" id="slider-blue" min="0" max="255" step="1" value="95"/>
+				<input type="range" id="slider-blue" min="0" max="255" step="1" value="95" onchange="sliderChanged();"/>
 				<div id="blue-color" class="index"></div>
 			</div>
 			<table>
