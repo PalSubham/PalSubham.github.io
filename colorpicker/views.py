@@ -18,7 +18,7 @@ def favicon():
 	return send_from_directory(os.path.join(os.path.join(current_app.root_path, 'static'), 'icon'), 'favicon.ico', mimetype = 'image/x-icon')
 
 
-# Find for PNG, if not found create one and serve it with some HTTP headers
+# Generates the requested PNG and stores it in memory as buffer and sends it as attachment
 @bp.route('/get_image', methods = ['GET',])
 def send_image():
 	color_code = request.args.get('hex_code')
