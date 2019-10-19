@@ -1,7 +1,6 @@
 from PIL import Image
-import os
 from io import BytesIO
-from flask import Blueprint, request, render_template, current_app, send_from_directory, make_response, Response
+from flask import Blueprint, request, render_template, make_response, Response
 
 
 bp = Blueprint('views', __name__, url_prefix = '/')
