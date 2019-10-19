@@ -4,5 +4,6 @@ __pycache__
 color-venv
 .DS_store
 *.ini
-uwsgi.log
-*.sock
+*.log
+*.pid
+*.fifo
