@@ -21,15 +21,15 @@ const sliderChanged = () => {
 	
 	if(window.matchMedia('only screen and (max-width: 768px) and (orientation: portrait)').matches)
 	{
-		$('body').css('background', 'linear-gradient(to top, ' + hex_col + ' 80%, #b0e0e6)');
+		$('body').css('background', 'linear-gradient(to top, ' + hex_col + ' 80%, #b0e0e6)').css('background-repeat', 'no-repeat').css('background-attachment', 'fixed');
 	}
 	else if(window.matchMedia('only screen and (max-width: 768px) and (orientation: landscape)').matches)
 	{
-		$('body').css('background', 'linear-gradient(to top, ' + hex_col + ' 50%, #b0e0e6)');
+		$('body').css('background', 'linear-gradient(to top, ' + hex_col + ' 50%, #b0e0e6)').css('background-repeat', 'no-repeat').css('background-attachment', 'fixed');
 	}
 	else
 	{
-		$('body').css('background', 'linear-gradient(to top, ' + hex_col + ' 55%, #b0e0e6)');
+		$('body').css('background', 'linear-gradient(to top, ' + hex_col + ' 55%, #b0e0e6)').css('background-repeat', 'no-repeat').css('background-attachment', 'fixed');
 	}
 	
 	$('#container').css('border-color', '#' + hex_pad(255 - red_val) + hex_pad(255 - green_val) + hex_pad(255 - blue_val));
