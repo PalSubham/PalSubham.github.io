@@ -1,9 +1,11 @@
 *.pyc
 *~
 __pycache__
-color-venv
 .DS_store
 *.ini
 *.log
 *.pid
 *.fifo
+
+# virtualenv
+color-venv
